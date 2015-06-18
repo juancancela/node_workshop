@@ -4,7 +4,10 @@
   "description": "node workshop",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": "0.12.2"
   },
   "repository": {
     "type": "git",
