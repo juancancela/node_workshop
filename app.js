@@ -6,8 +6,8 @@ var app = express();
 app.use( bodyParser.json() );
 app.use('/user', users);
 
-var server = app.listen(3000, function () {
-  var host = server.address().address;
-  var port = server.address().port;
-  console.log('App listening in http://%s:%s', host, port);
+app.set('port', (process.env.PORT || 5000));
+
+var server = app.listen(app.get('port'), function () {
+  console.log("app started!");
 });
